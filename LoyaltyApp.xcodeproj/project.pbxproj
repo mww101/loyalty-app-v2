@@ -56,9 +56,26 @@
 		ECCBFF0809F3879DFB4A7313 /* LoyaltyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoyaltyView.swift; path = LoyaltyApp/LoyaltyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B40420302DFB8CD600CC5280 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				LoginFlowTests.swift,
+			);
+			target = B4EB32992DFB4D6200489171 /* LoyaltyAppTests */;
+		};
+		B40420312DFB8CD600CC5280 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				LoginFlowTests.swift,
+			);
+			target = B40420172DFB892B00CC5280 /* UITestingBundle */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B40420192DFB892B00CC5280 /* UITestingBundle */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = UITestingBundle; sourceTree = "<group>"; };
-		B4EB329B2DFB4D6200489171 /* LoyaltyAppTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = LoyaltyAppTests; sourceTree = "<group>"; };
+		B4EB329B2DFB4D6200489171 /* LoyaltyAppTests */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (B40420302DFB8CD600CC5280 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, B40420312DFB8CD600CC5280 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = LoyaltyAppTests; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
