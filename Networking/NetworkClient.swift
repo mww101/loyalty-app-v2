@@ -7,13 +7,21 @@ enum NetworkError: Error {
 struct NetworkClient {
     let baseURL: URL
 
-    func buildRequest(endpoint: String) throws -> URLRequest {
-        guard let (token, _) = KeychainManager.getToken() else {
-            throw NetworkError.notAuthenticated
+    /// Builds a request for the given API endpoint ensuring an up-to-date
+    /// authentication token is used. The completion handler is executed on the
+    /// main queue.
+    func buildRequest(endpoint: String,
+                      completion: @escaping (Result<URLRequest, Error>) -> Void) {
+        TokenRefresher.ensureFreshToken { result in
+            switch result {
+            case .success(let token):
+                let url = self.baseURL.appendingPathComponent(endpoint)
+                var request = URLRequest(url: url)
+                request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+                completion(.success(request))
+            case .failure(let error):
+                completion(.failure(error))
+            }
         }
-        let url = baseURL.appendingPathComponent(endpoint)
-        var request = URLRequest(url: url)
-        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
-        return request
     }
 }
