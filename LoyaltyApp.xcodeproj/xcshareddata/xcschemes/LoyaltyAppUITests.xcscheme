@@ -19,9 +19,9 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B40420172DFB892B00CC5280"
-               BuildableName = "UITestingBundle.xctest"
-               BlueprintName = "UITestingBundle"
+               BlueprintIdentifier = "B40420372DFB935300CC5280"
+               BuildableName = "LoyaltyAppUITests.xctest"
+               BlueprintName = "LoyaltyAppUITests"
                ReferencedContainer = "container:LoyaltyApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
