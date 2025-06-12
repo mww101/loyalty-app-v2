@@ -1,15 +1,33 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack{
-            Image("Logo")
-            Text("Welcome to Loyalty App")
-                .padding()
-        }
-    }
-}
+  @State private var email: String = ""
+  @State private var tokenInfo: (token: String, date: Date)?
 
-#Preview {
-    ContentView()
+  var body: some View {
+    VStack(spacing: 16) {
+      TextField("Enter email", text: $email)
+        .textFieldStyle(.roundedBorder)
+        .padding()
+
+      Button("Save Email") {
+        KeychainManager.saveEmail(email)
+      }
+
+      Button("Load Email") {
+        email = KeychainManager.getEmail() ?? "nil"
+      }
+
+      if let info = tokenInfo {
+        Text("Token: \(info.token)")
+        Text("Saved on: \(info.date.formatted())")
+      }
+
+      Button("Test Token") {
+        KeychainManager.saveToken("ABC123", date: Date())
+        tokenInfo = KeychainManager.getToken()
+      }
+    }
+    .padding()
+  }
 }

@@ -7,22 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00071BEF161E4B7AA171AF6E /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FE2ABE2BF9456DB3135D32 /* KeychainManager.swift */; };
 		49313106CD2C3B5C8EC677D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14689FE138AFF5111BBB34FD /* Foundation.framework */; };
-                B45599812DFA4AEA000CA82C /* LoyaltyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455997F2DFA4AEA000CA82C /* LoyaltyAppApp.swift */; };
-                B45599822DFA4AEA000CA82C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455997D2DFA4AEA000CA82C /* ContentView.swift */; };
-                00071BEF161E4B7AA171AF6E /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FE2ABE2BF9456DB3135D32 /* KeychainManager.swift */; };
-                B45599852DFA527C000CA82C /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B45599842DFA527C000CA82C /* Media.xcassets */; };
+		B45599812DFA4AEA000CA82C /* LoyaltyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455997F2DFA4AEA000CA82C /* LoyaltyAppApp.swift */; };
+		B45599822DFA4AEA000CA82C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455997D2DFA4AEA000CA82C /* ContentView.swift */; };
+		B4D20D9F2DFA5F1000937E7D /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = B4D20D9E2DFA5F1000937E7D /* KeychainAccess */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		14689FE138AFF5111BBB34FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		23FE2ABE2BF9456DB3135D32 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeychainManager.swift; path = LoyaltyApp/KeychainManager.swift; sourceTree = "<group>"; };
 		459AC8F993460F7EA5C52E88 /* LoyaltyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoyaltyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B45599782DFA47AF000CA82C /* Loyalty App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Loyalty App-Bridging-Header.h"; sourceTree = "<group>"; };
 		B455997D2DFA4AEA000CA82C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = LoyaltyApp/ContentView.swift; sourceTree = "<group>"; };
 		B455997E2DFA4AEA000CA82C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = LoyaltyApp/Info.plist; sourceTree = "<group>"; };
-                B455997F2DFA4AEA000CA82C /* LoyaltyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoyaltyAppApp.swift; path = LoyaltyApp/LoyaltyAppApp.swift; sourceTree = "<group>"; };
-                B45599842DFA527C000CA82C /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
-                23FE2ABE2BF9456DB3135D32 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeychainManager.swift; path = LoyaltyApp/KeychainManager.swift; sourceTree = "<group>"; };
+		B455997F2DFA4AEA000CA82C /* LoyaltyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoyaltyAppApp.swift; path = LoyaltyApp/LoyaltyAppApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4D20D9F2DFA5F1000937E7D /* KeychainAccess in Frameworks */,
 				49313106CD2C3B5C8EC677D4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -37,18 +37,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-                3F2C08D0ACC7B890F3D8AD58 /* iOS */ = {
-                        isa = PBXGroup;
-                        children = (
-                                14689FE138AFF5111BBB34FD /* Foundation.framework */,
-                                B455997D2DFA4AEA000CA82C /* ContentView.swift */,
-                                B455997E2DFA4AEA000CA82C /* Info.plist */,
-                                B455997F2DFA4AEA000CA82C /* LoyaltyAppApp.swift */,
-                                23FE2ABE2BF9456DB3135D32 /* KeychainManager.swift */,
-                        );
-                        name = iOS;
-                        sourceTree = "<group>";
-                };
+		3F2C08D0ACC7B890F3D8AD58 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				14689FE138AFF5111BBB34FD /* Foundation.framework */,
+				B455997D2DFA4AEA000CA82C /* ContentView.swift */,
+				B455997E2DFA4AEA000CA82C /* Info.plist */,
+				B455997F2DFA4AEA000CA82C /* LoyaltyAppApp.swift */,
+				23FE2ABE2BF9456DB3135D32 /* KeychainManager.swift */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		8320322A42405907EA2E626A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -60,7 +60,6 @@
 		95001A5F4C9FFE29E72FB796 = {
 			isa = PBXGroup;
 			children = (
-				B45599842DFA527C000CA82C /* Media.xcassets */,
 				CF69855BD04EDCCF1268DDF7 /* Products */,
 				8320322A42405907EA2E626A /* Frameworks */,
 				E7D7731D67C63B92B2139F8F /* LoyaltyApp */,
@@ -127,6 +126,9 @@
 				Base,
 			);
 			mainGroup = 95001A5F4C9FFE29E72FB796;
+			packageReferences = (
+				B4D20D9D2DFA5F1000937E7D /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = CF69855BD04EDCCF1268DDF7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,7 +143,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B45599852DFA527C000CA82C /* Media.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,11 +152,11 @@
 		E527395C12C592CEFB1C3467 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
-                        files = (
-                                B45599812DFA4AEA000CA82C /* LoyaltyAppApp.swift in Sources */,
-                                B45599822DFA4AEA000CA82C /* ContentView.swift in Sources */,
-                                00071BEF161E4B7AA171AF6E /* KeychainManager.swift in Sources */,
-                        );
+			files = (
+				B45599812DFA4AEA000CA82C /* LoyaltyAppApp.swift in Sources */,
+				B45599822DFA4AEA000CA82C /* ContentView.swift in Sources */,
+				00071BEF161E4B7AA171AF6E /* KeychainManager.swift in Sources */,
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
@@ -224,7 +225,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				INFOPLIST_FILE = "$(SRCROOT)/LoyaltyApp/Info.plist";
+				INFOPLIST_FILE = LoyaltyApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -309,7 +310,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				INFOPLIST_FILE = "$(SRCROOT)/LoyaltyApp/Info.plist";
+				INFOPLIST_FILE = LoyaltyApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -346,6 +347,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B4D20D9D2DFA5F1000937E7D /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B4D20D9E2DFA5F1000937E7D /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B4D20D9D2DFA5F1000937E7D /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FABDEE304CAF3C0769F107BB /* Project object */;
 }
