@@ -39,7 +39,7 @@ struct LoyaltyView: View {
         }
 
         DispatchQueue.global(qos: .background).async {
-            GoodtillAPI.fetchCustomer(email: email) { result in
+            MockGoodtillAPI.fetchCustomer(email: email) { result in
                 switch result {
                 case .success(let customer):
                     let pts = customer.loyalty_points

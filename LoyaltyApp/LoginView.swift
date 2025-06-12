@@ -30,7 +30,7 @@ struct LoginView: View {
 
     @MainActor
     private func signIn() {
-        GoodtillAPI.signIn(email: email) { result in
+        MockGoodtillAPI.signIn(email: email) { result in
             switch result {
             case .success(let token):
                 KeychainManager.saveEmail(email)
@@ -41,6 +41,7 @@ struct LoginView: View {
                 showAlert = true
             }
         }
+    
     }
 }
 
