@@ -1,7 +1,7 @@
 import Foundation
 
 /// Responsible for ensuring the saved authentication token is valid. If the
-token is close to expiration a refresh will be attempted.
+/// token is close to expiration a refresh will be attempted.
 struct TokenRefresher {
     /// Tokens are refreshed when less than five minutes remain before expiry.
     static let refreshThreshold: TimeInterval = 5 * 60
