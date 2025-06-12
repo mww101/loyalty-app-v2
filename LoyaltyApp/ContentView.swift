@@ -2,8 +2,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Welcome to Loyalty App")
-            .padding()
+        VStack{
+            Image("Logo")
+            Text("Welcome to Loyalty App")
+                .padding()
+        }
     }
 }
 

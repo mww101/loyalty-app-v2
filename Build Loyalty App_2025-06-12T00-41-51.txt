@@ -1,0 +1,23 @@
+
+Showing Recent Issues
+
+Prepare build
+error: Multiple commands produce '/Users/michaelwhite/Library/Developer/Xcode/DerivedData/LoyaltyApp-dqprwbvyoyhjkhdkexejyajhpsei/Build/Products/Debug-iphonesimulator/LoyaltyApp.app/Info.plist'
+    note: Target 'LoyaltyApp' (project 'LoyaltyApp') has copy command from '/Users/michaelwhite/Documents/GitHub/loyalty-app-v2/LoyaltyApp/Info.plist' to '/Users/michaelwhite/Library/Developer/Xcode/DerivedData/LoyaltyApp-dqprwbvyoyhjkhdkexejyajhpsei/Build/Products/Debug-iphonesimulator/LoyaltyApp.app/Info.plist'
+    note: Target 'LoyaltyApp' (project 'LoyaltyApp') has process command with output '/Users/michaelwhite/Library/Developer/Xcode/DerivedData/LoyaltyApp-dqprwbvyoyhjkhdkexejyajhpsei/Build/Products/Debug-iphonesimulator/LoyaltyApp.app/Info.plist'
+
+
+Multiple commands produce '/Users/michaelwhite/Library/Developer/Xcode/DerivedData/LoyaltyApp-dqprwbvyoyhjkhdkexejyajhpsei/Build/Products/Debug-iphonesimulator/LoyaltyApp.app/Info.plist'
+
+
+Build target LoyaltyApp of project LoyaltyApp with configuration Debug
+warning: duplicate output file '/Users/michaelwhite/Library/Developer/Xcode/DerivedData/LoyaltyApp-dqprwbvyoyhjkhdkexejyajhpsei/Build/Products/Debug-iphonesimulator/LoyaltyApp.app/Info.plist' on task: ProcessInfoPlistFile /Users/michaelwhite/Library/Developer/Xcode/DerivedData/LoyaltyApp-dqprwbvyoyhjkhdkexejyajhpsei/Build/Products/Debug-iphonesimulator/LoyaltyApp.app/Info.plist /Users/michaelwhite/Documents/GitHub/loyalty-app-v2/LoyaltyApp/Info.plist
+ (in target 'LoyaltyApp' from project 'LoyaltyApp')
+
+
+duplicate output file '/Users/michaelwhite/Library/Developer/Xcode/DerivedData/LoyaltyApp-dqprwbvyoyhjkhdkexejyajhpsei/Build/Products/Debug-iphonesimulator/LoyaltyApp.app/Info.plist' on task: ProcessInfoPlistFile /Users/michaelwhite/Library/Developer/Xcode/DerivedData/LoyaltyApp-dqprwbvyoyhjkhdkexejyajhpsei/Build/Products/Debug-iphonesimulator/LoyaltyApp.app/Info.plist /Users/michaelwhite/Documents/GitHub/loyalty-app-v2/LoyaltyApp/Info.plist
+
+
+
+
+Build failed    12/06/2025, 00:41    0.2 seconds
