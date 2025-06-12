@@ -15,13 +15,15 @@ struct LoginView: View {
                 Button("Sign In") {
                     signIn()
                 }
-                NavigationLink(destination: LoyaltyView(), isActive: $navigate) { EmptyView() }
             }
             .padding()
             .alert("Error", isPresented: $showAlert) {
                 Button("OK", role: .cancel) {}
             } message: {
                 Text(alertMessage)
+            }
+            .navigationDestination(isPresented: $navigate) {
+                LoyaltyView()
             }
         }
     }
