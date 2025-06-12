@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		49313106CD2C3B5C8EC677D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14689FE138AFF5111BBB34FD /* Foundation.framework */; };
-		B45599812DFA4AEA000CA82C /* LoyaltyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455997F2DFA4AEA000CA82C /* LoyaltyAppApp.swift */; };
-		B45599822DFA4AEA000CA82C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455997D2DFA4AEA000CA82C /* ContentView.swift */; };
-		B45599852DFA527C000CA82C /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B45599842DFA527C000CA82C /* Media.xcassets */; };
+                B45599812DFA4AEA000CA82C /* LoyaltyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455997F2DFA4AEA000CA82C /* LoyaltyAppApp.swift */; };
+                B45599822DFA4AEA000CA82C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B455997D2DFA4AEA000CA82C /* ContentView.swift */; };
+                00071BEF161E4B7AA171AF6E /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FE2ABE2BF9456DB3135D32 /* KeychainManager.swift */; };
+                B45599852DFA527C000CA82C /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B45599842DFA527C000CA82C /* Media.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,8 +20,9 @@
 		B45599782DFA47AF000CA82C /* Loyalty App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Loyalty App-Bridging-Header.h"; sourceTree = "<group>"; };
 		B455997D2DFA4AEA000CA82C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = LoyaltyApp/ContentView.swift; sourceTree = "<group>"; };
 		B455997E2DFA4AEA000CA82C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = LoyaltyApp/Info.plist; sourceTree = "<group>"; };
-		B455997F2DFA4AEA000CA82C /* LoyaltyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoyaltyAppApp.swift; path = LoyaltyApp/LoyaltyAppApp.swift; sourceTree = "<group>"; };
-		B45599842DFA527C000CA82C /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+                B455997F2DFA4AEA000CA82C /* LoyaltyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoyaltyAppApp.swift; path = LoyaltyApp/LoyaltyAppApp.swift; sourceTree = "<group>"; };
+                B45599842DFA527C000CA82C /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+                23FE2ABE2BF9456DB3135D32 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeychainManager.swift; path = LoyaltyApp/KeychainManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +37,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3F2C08D0ACC7B890F3D8AD58 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				14689FE138AFF5111BBB34FD /* Foundation.framework */,
-				B455997D2DFA4AEA000CA82C /* ContentView.swift */,
-				B455997E2DFA4AEA000CA82C /* Info.plist */,
-				B455997F2DFA4AEA000CA82C /* LoyaltyAppApp.swift */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
+                3F2C08D0ACC7B890F3D8AD58 /* iOS */ = {
+                        isa = PBXGroup;
+                        children = (
+                                14689FE138AFF5111BBB34FD /* Foundation.framework */,
+                                B455997D2DFA4AEA000CA82C /* ContentView.swift */,
+                                B455997E2DFA4AEA000CA82C /* Info.plist */,
+                                B455997F2DFA4AEA000CA82C /* LoyaltyAppApp.swift */,
+                                23FE2ABE2BF9456DB3135D32 /* KeychainManager.swift */,
+                        );
+                        name = iOS;
+                        sourceTree = "<group>";
+                };
 		8320322A42405907EA2E626A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,10 +151,11 @@
 		E527395C12C592CEFB1C3467 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
-			files = (
-				B45599812DFA4AEA000CA82C /* LoyaltyAppApp.swift in Sources */,
-				B45599822DFA4AEA000CA82C /* ContentView.swift in Sources */,
-			);
+                        files = (
+                                B45599812DFA4AEA000CA82C /* LoyaltyAppApp.swift in Sources */,
+                                B45599822DFA4AEA000CA82C /* ContentView.swift in Sources */,
+                                00071BEF161E4B7AA171AF6E /* KeychainManager.swift in Sources */,
+                        );
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
