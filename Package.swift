@@ -15,8 +15,13 @@ let package = Package(
     ],
     targets: [
         .target(
+            name: "Networking",
+            path: "Networking"
+        ),
+        .target(
             name: "LoyaltyApp",
             dependencies: [
+                "Networking",
                 .product(name: "KeychainAccess", package: "KeychainAccess")
             ],
             path: "LoyaltyApp"
