@@ -52,6 +52,7 @@
 		B4EB32902DFB44D800489171 /* TokenRefresher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenRefresher.swift; sourceTree = "<group>"; };
 		B4EB32942DFB4ABD00489171 /* MockGoodtillAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MockGoodtillAPI.swift; path = LoyaltyApp/MockGoodtillAPI.swift; sourceTree = "<group>"; };
 		B4EB329A2DFB4D6200489171 /* LoyaltyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoyaltyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4F5560F2DFB9996009E8AF4 /* LoyaltyAppUITests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = LoyaltyAppUITests.xctestplan; sourceTree = "<group>"; };
 		ECCBFF0809F3879DFB4A7313 /* LoyaltyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoyaltyView.swift; path = LoyaltyApp/LoyaltyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +107,7 @@
 		95001A5F4C9FFE29E72FB796 = {
 			isa = PBXGroup;
 			children = (
+				B4F5560F2DFB9996009E8AF4 /* LoyaltyAppUITests.xctestplan */,
 				B4EB32942DFB4ABD00489171 /* MockGoodtillAPI.swift */,
 				B4D20DA22DFB25E300937E7D /* GoodtillAPI.swift */,
 				14689FE138AFF5111BBB34FD /* Foundation.framework */,

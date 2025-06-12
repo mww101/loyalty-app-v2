@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "309FA1B3-8379-452B-8F5D-9DC4D2AB23B2",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:LoyaltyApp.xcodeproj",
+        "identifier" : "B40420372DFB935300CC5280",
+        "name" : "LoyaltyAppUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
