@@ -10,11 +10,13 @@ struct LoginView: View {
         NavigationStack {
             VStack(spacing: 20) {
                 TextField("Email", text: $email)
+                    .accessibilityIdentifier("emailField")
                     .textFieldStyle(.roundedBorder)
                     .keyboardType(.emailAddress)
                 Button("Sign In") {
                     signIn()
                 }
+                .accessibilityIdentifier("signInButton")
             }
             .padding()
             .alert("Error", isPresented: $showAlert) {
