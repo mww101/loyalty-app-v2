@@ -10,12 +10,12 @@ final class LoginFlowTests: XCTestCase {
 
     func testLoginAndDisplayLoyaltyFlow() throws {
         let app = XCUIApplication()
-        let emailField = app.textFields["Email"]
+        let emailField = app.textFields["emailField"]
         XCTAssertTrue(emailField.waitForExistence(timeout: 2))
         emailField.tap()
         emailField.typeText("test@example.com")
 
-        app.buttons["Sign In"].tap()
+        app.buttons["signInButton"].tap()
 
         let ptsLabel = app.staticTexts["pointsLabel"]
         XCTAssertTrue(ptsLabel.waitForExistence(timeout: 5))
