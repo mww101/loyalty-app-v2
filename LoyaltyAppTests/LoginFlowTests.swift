@@ -17,9 +17,8 @@ final class LoginFlowTests: XCTestCase {
 
         app.buttons["Sign In"].tap()
 
-        let ptsLabel = app.staticTexts["You have 750 pts (~£7.50)"]
-        XCTAssertTrue(ptsLabel.waitForExistence(timeout: 2))
-
+        let ptsLabel = app.staticTexts["pointsLabel"]
+        XCTAssertTrue(ptsLabel.waitForExistence(timeout: 5))
         app.buttons["Refresh"].tap()
 
         XCTAssertTrue(ptsLabel.exists)

@@ -13,6 +13,7 @@ struct LoyaltyView: View {
             if let points {
                 VStack(spacing: 20) {
                     Text("You have \(points) pts (~\(pounds))")
+                        .accessibilityIdentifier("pointsLabel")
                     if let qrImage {
                         qrImage
                             .resizable()
