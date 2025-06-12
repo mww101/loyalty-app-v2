@@ -1,4 +1,3 @@
-import Foundation
 import SwiftUI
 
 struct LoginView: View {
@@ -27,18 +26,17 @@ struct LoginView: View {
         }
     }
 
+    @MainActor
     private func signIn() {
         GoodtillAPI.signIn(email: email) { result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let token):
-                    KeychainManager.saveEmail(email)
-                    KeychainManager.saveToken(token, date: Date())
-                    navigate = true
-                case .failure(let error):
-                    alertMessage = error.localizedDescription
-                    showAlert = true
-                }
+            switch result {
+            case .success(let token):
+                KeychainManager.saveEmail(email)
+                KeychainManager.saveToken(token, date: Date())
+                navigate = true
+            case .failure(let error):
+                alertMessage = error.localizedDescription
+                showAlert = true
             }
         }
     }
