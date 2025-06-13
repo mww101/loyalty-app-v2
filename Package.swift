@@ -27,20 +27,8 @@ let package = Package(
                 .product(name: "KeychainAccess", package: "KeychainAccess")
             ],
             path: "LoyaltyApp"
-        ),
-
-        // Unit tests
-        .testTarget(
-            name: "LoyaltyAppTests",
-            dependencies: ["LoyaltyApp"],
-            path: "LoyaltyAppTests"
-        ),
-
-        // UI tests
-        .testTarget(
-            name: "LoyaltyAppUITests",
-            dependencies: ["LoyaltyApp"],
-            path: "LoyaltyAppUITests"
         )
+
+        // (Test targets removed until you add the corresponding folders back)
     ]
 )
