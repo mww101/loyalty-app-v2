@@ -2,6 +2,7 @@ import Foundation
 import SwiftUI
 import CoreImage.CIFilterBuiltins
 
+@available(iOS 15.0, *)
 struct LoyaltyView: View {
     @State private var points: Int?
     @State private var pounds: String = ""

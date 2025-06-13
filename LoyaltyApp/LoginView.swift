@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(iOS 15.0, *)
 struct LoginView: View {
     @State private var email: String = ""
     @State private var showAlert: Bool = false

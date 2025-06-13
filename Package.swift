@@ -13,35 +13,31 @@ let package = Package(
         )
     ],
     dependencies: [
-        // Keychain helper
         .package(
             url: "https://github.com/kishikawakatsumi/KeychainAccess.git",
             .upToNextMinor(from: "4.2.2")
         )
     ],
     targets: [
-        // Main app code
         .target(
             name: "LoyaltyApp",
             dependencies: [
                 .product(name: "KeychainAccess", package: "KeychainAccess")
             ],
-            path: "LoyaltyApp"
+            path: "LoyaltyApp",
+            resources: [
+                .process("Media.xcassets")
+            ]
         ),
-
-        // Unit tests
         .testTarget(
-                name: "LoyaltyAppTests",
-                dependencies: ["LoyaltyApp"],
-                path: "Tests/LoyaltyAppTests"
-            ),
-
-
-        // UI tests
+            name: "LoyaltyAppTests",
+            dependencies: ["LoyaltyApp"],
+            path: "Tests/LoyaltyAppTests"
+        ),
         .testTarget(
-                   name: "LoyaltyAppUITests",
-                   dependencies: ["LoyaltyApp"],
-                   path: "Tests/LoyaltyAppUITests"
-               )
+            name: "LoyaltyAppUITests",
+            dependencies: ["LoyaltyApp"],
+            path: "Tests/LoyaltyAppUITests"
+        ),
     ]
 )
