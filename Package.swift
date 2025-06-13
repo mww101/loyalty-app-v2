@@ -26,7 +26,7 @@ let package = Package(
             ],
             path: "LoyaltyApp",
             resources: [
-                .process("Media.xcassets")
+                .process("../Media.xcassets")
             ]
         ),
         .testTarget(
