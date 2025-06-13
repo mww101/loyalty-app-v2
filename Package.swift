@@ -1,30 +1,43 @@
-// swift-tools-version: 5.9
-import PackageDescription
+// swift-tools-version:5.7
+ import PackageDescription
 
 let package = Package(
     name: "LoyaltyApp",
-    platforms: [.iOS(.v14)],
-    products: [
-        .library(
-            name: "LoyaltyApp",
-            targets: ["LoyaltyApp"]
+    platforms: [.iOS(.v16)],
+       
+    
+        products: [
+            .executable(name: "LoyaltyApp", targets: ["LoyaltyApp"])
+        ],
+    dependencies: [
+        // Keychain helper
+        .package(
+            url: "https://github.com/kishikawakatsumi/KeychainAccess.git",
+            .upToNextMinor(from: "4.2.2")
         )
     ],
-    dependencies: [
-        .package(url: "https://github.com/kishikawakatsumi/KeychainAccess.git", .exact("4.2.2"))
-    ],
     targets: [
-        .target(
-            name: "Networking",
-            path: "Networking"
-        ),
-        .target(
+        // Main app code lives in LoyaltyApp/
+        .executableTarget(
             name: "LoyaltyApp",
             dependencies: [
-                "Networking",
-                .product(name: "KeychainAccess", package: "KeychainAccess")
+              .product(name: "KeychainAccess", package: "KeychainAccess")
             ],
             path: "LoyaltyApp"
+          ),
+
+        // Unit tests in LoyaltyAppTests/
+        .testTarget(
+            name: "LoyaltyAppTests",
+            dependencies: ["LoyaltyApp"],
+            path: "LoyaltyAppTests"
+        ),
+
+        // UI tests in LoyaltyAppUITests/
+        .testTarget(
+            name: "LoyaltyAppUITests",
+            dependencies: ["LoyaltyApp"],
+            path: "LoyaltyAppUITests"
         )
     ]
 )
