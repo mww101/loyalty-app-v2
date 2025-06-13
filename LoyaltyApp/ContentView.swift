@@ -20,7 +20,11 @@ struct ContentView: View {
 
       if let info = tokenInfo {
         Text("Token: \(info.token)")
-        Text("Saved on: \(info.date.formatted())")
+          if #available(iOS 15.0, *) {
+              Text("Saved on: \(info.date.formatted())")
+          } else {
+              // Fallback on earlier versions
+          }
       }
 
       Button("Test Token") {
