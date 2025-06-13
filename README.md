@@ -1,10 +1,21 @@
 # Loyalty App
 
-This repository contains a minimal SwiftUI application skeleton targeting iOS 18. The project is provided as a regular Xcode project so you can open it directly in Xcode.
+This repository contains a minimal SwiftUI based application structured as a Swift Package.
+It targets iOS 15 and later. The package can be opened directly in Xcode or built on the
+command line using Swift Package Manager.
 
 ## Getting Started
 
-1. Open `Loyalty App.xcodeproj` in Xcode 18 or later.
-2. Build and run on the iOS 18 simulator or a device.
+1. Open the project folder in **Xcode 15** or later using `File > Open...` and select the
+   `Package.swift` manifest.
+2. Choose an iOS simulator and build/run the `LoyaltyApp` scheme.
 
-The app includes a single `ContentView` presented from `LoyaltyAppApp`.
+Alternatively, from a macOS terminal you can build and test the package with:
+
+```bash
+swift build
+swift test
+```
+
+The app launches `LoginView` which stores a JWT token in the Keychain using
+`KeychainAccess` and then displays loyalty information via `LoyaltyView`.
