@@ -7,26 +7,30 @@ struct LoginView: View {
     @State private var navigate: Bool = false
 
     var body: some View {
-        NavigationStack {
-            VStack(spacing: 20) {
-                TextField("Email", text: $email)
-                    .accessibilityIdentifier("emailField")
-                    .textFieldStyle(.roundedBorder)
-                    .keyboardType(.emailAddress)
-                Button("Sign In") {
-                    signIn()
+        if #available(iOS 16.0, *) {
+            NavigationStack {
+                VStack(spacing: 20) {
+                    TextField("Email", text: $email)
+                        .accessibilityIdentifier("emailField")
+                        .textFieldStyle(.roundedBorder)
+                        .keyboardType(.emailAddress)
+                    Button("Sign In") {
+                        signIn()
+                    }
+                    .accessibilityIdentifier("signInButton")
                 }
-                .accessibilityIdentifier("signInButton")
+                .padding()
+                .alert("Error", isPresented: $showAlert) {
+                    Button("OK", role: .cancel) {}
+                } message: {
+                    Text(alertMessage)
+                }
+                .navigationDestination(isPresented: $navigate) {
+                    LoyaltyView()
+                }
             }
-            .padding()
-            .alert("Error", isPresented: $showAlert) {
-                Button("OK", role: .cancel) {}
-            } message: {
-                Text(alertMessage)
-            }
-            .navigationDestination(isPresented: $navigate) {
-                LoyaltyView()
-            }
+        } else {
+            // Fallback on earlier versions
         }
     }
 

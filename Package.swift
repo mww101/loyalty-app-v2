@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "LoyaltyApp",
     platforms: [
-        .iOS(.v14)
+        .iOS(.v15)
     ],
     products: [
         .library(
@@ -27,8 +27,21 @@ let package = Package(
                 .product(name: "KeychainAccess", package: "KeychainAccess")
             ],
             path: "LoyaltyApp"
-        )
+        ),
 
-        // (Test targets removed until you add the corresponding folders back)
+        // Unit tests
+        .testTarget(
+                name: "LoyaltyAppTests",
+                dependencies: ["LoyaltyApp"],
+                path: "Tests/LoyaltyAppTests"
+            ),
+
+
+        // UI tests
+        .testTarget(
+                   name: "LoyaltyAppUITests",
+                   dependencies: ["LoyaltyApp"],
+                   path: "Tests/LoyaltyAppUITests"
+               )
     ]
 )
