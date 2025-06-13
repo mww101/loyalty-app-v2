@@ -25,6 +25,9 @@ let package = Package(
                 .product(name: "KeychainAccess", package: "KeychainAccess")
             ],
             path: "LoyaltyApp",
+            exclude: [
+                "Info.plist"
+            ],
             resources: [
                 .process("../Media.xcassets")
             ]

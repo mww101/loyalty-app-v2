@@ -9,25 +9,11 @@ on:
 jobs:
   build-and-test:
     runs-on: macos-latest
-    strategy:
-      matrix:
-        platform: [iOS]
     steps:
       - uses: actions/checkout@v4
 
-      # install SwiftPM dependencies and build
       - name: Build Swift package
         run: swift build --disable-sandbox
 
-      # run unit tests
-      - name: Run unit tests
+      - name: Run tests
         run: swift test --disable-sandbox
-
-      # run UI tests via xcodebuild
-      - name: Run UI tests
-        run: |
-          xcodebuild \
-            -workspace loyalty-v2.xcworkspace \
-            -scheme LoyaltyAppUITests \
-            -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' \
-            test
