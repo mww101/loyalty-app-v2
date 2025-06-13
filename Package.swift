@@ -1,14 +1,17 @@
-// swift-tools-version:5.7
- import PackageDescription
+// swift-tools-version:5.9
+import PackageDescription
 
 let package = Package(
     name: "LoyaltyApp",
-    platforms: [.iOS(.v16)],
-       
-    
-        products: [
-            .executable(name: "LoyaltyApp", targets: ["LoyaltyApp"])
-        ],
+    platforms: [
+        .iOS(.v14)
+    ],
+    products: [
+        .library(
+            name: "LoyaltyApp",
+            targets: ["LoyaltyApp"]
+        )
+    ],
     dependencies: [
         // Keychain helper
         .package(
@@ -17,23 +20,23 @@ let package = Package(
         )
     ],
     targets: [
-        // Main app code lives in LoyaltyApp/
-        .executableTarget(
+        // Main app code
+        .target(
             name: "LoyaltyApp",
             dependencies: [
-              .product(name: "KeychainAccess", package: "KeychainAccess")
+                .product(name: "KeychainAccess", package: "KeychainAccess")
             ],
             path: "LoyaltyApp"
-          ),
+        ),
 
-        // Unit tests in LoyaltyAppTests/
+        // Unit tests
         .testTarget(
             name: "LoyaltyAppTests",
             dependencies: ["LoyaltyApp"],
             path: "LoyaltyAppTests"
         ),
 
-        // UI tests in LoyaltyAppUITests/
+        // UI tests
         .testTarget(
             name: "LoyaltyAppUITests",
             dependencies: ["LoyaltyApp"],
